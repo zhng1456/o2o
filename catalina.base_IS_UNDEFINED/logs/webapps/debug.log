@@ -21,3 +21,6 @@
 2018-04-11 17:03:07.867 [main] DEBUG com.wang.o2o.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, last_edit_time=?, enable_status=?, advice=?, area_id=?, shop_category_id=? where shop_id=? 
 2018-04-11 17:03:07.870 [main] DEBUG com.wang.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试的店铺3(String), test3(String), test3(String), test3(String), \upload\images\item\shop\38\2018041117030527565.jpg(String), 2018-04-11 17:03:05.683(Timestamp), 0(Integer), 审核中(String), 2(Integer), 10(Long), 38(Long)
 2018-04-11 17:03:07.969 [main] DEBUG com.wang.o2o.dao.ShopDao.updateShop - <==    Updates: 1
+2018-04-11 19:14:53.631 [main] DEBUG com.wang.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2018-04-11 19:14:53.724 [main] DEBUG com.wang.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2018-04-11 19:14:53.816 [main] DEBUG com.wang.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 6

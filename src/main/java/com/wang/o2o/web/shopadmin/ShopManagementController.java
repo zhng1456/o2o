@@ -37,8 +37,10 @@ import com.wang.o2o.util.HttpServletRequestUtil;
 public class ShopManagementController {
 	@Autowired
 	private ShopService shopService;
+	
 	@Autowired
 	private ShopCategoryService shopCategoryService;
+	
 	@Autowired
 	private AreaService areaService;
 
@@ -109,7 +111,7 @@ public class ShopManagementController {
 		}
 		return modelMap;
 	}
-
+	
 	@RequestMapping(value = "/getshopinitinfo", method = RequestMethod.GET)
 	@ResponseBody
 	private Map<String, Object> getShopInitInfo() {
@@ -128,7 +130,7 @@ public class ShopManagementController {
 		}
 		return modelMap;
 	}
-
+	
 	@RequestMapping(value = "/registershop", method = RequestMethod.POST)
 	@ResponseBody
 	private Map<String, Object> registerShop(HttpServletRequest request) {
@@ -162,7 +164,10 @@ public class ShopManagementController {
 		}
 		// 2.注册店铺
 		if (shop != null && shopImg != null) {
-			PersonInfo owner = (PersonInfo) request.getSession().getAttribute("user");
+			//PersonInfo owner = (PersonInfo) request.getSession().getAttribute("user");
+			//这里先用1做测试,后面改成从Session中读
+			PersonInfo owner =new PersonInfo();
+			owner.setUserId(1L);
 			shop.setOwner(owner);
 			ShopExecution se;
 			try {
