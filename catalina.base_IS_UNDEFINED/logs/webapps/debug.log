@@ -12,3 +12,12 @@
 2018-04-11 16:17:10.811 [main] DEBUG com.wang.o2o.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_desc=?, shop_addr=?, last_edit_time=? where shop_id=? 
 2018-04-11 16:17:10.859 [main] DEBUG com.wang.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试描述(String), 测试地址a(String), 2018-04-11 16:17:09.752(Timestamp), 1(Long)
 2018-04-11 16:17:10.960 [main] DEBUG com.wang.o2o.dao.ShopDao.updateShop - <==    Updates: 1
+2018-04-11 17:03:05.728 [main] DEBUG com.wang.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?,?,?,?, ?,?,?,?,?, ?,?, ?,?) 
+2018-04-11 17:03:05.795 [main] DEBUG com.wang.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 10(Long), 测试的店铺3(String), test3(String), test3(String), test3(String), null, null, 2018-04-11 17:03:05.683(Timestamp), 2018-04-11 17:03:05.683(Timestamp), 0(Integer), 审核中(String)
+2018-04-11 17:03:05.894 [main] DEBUG com.wang.o2o.dao.ShopDao.insertShop - <==    Updates: 1
+2018-04-11 17:03:05.963 [main] DEBUG com.wang.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\38\2018041117030527565.jpg
+2018-04-11 17:03:05.964 [main] DEBUG com.wang.o2o.util.ImageUtil - current complete addr is :F:\projectdev\image\upload\images\item\shop\38\2018041117030527565.jpg
+2018-04-11 17:03:05.964 [main] DEBUG com.wang.o2o.util.ImageUtil - basePath is :/E:/study_hadoop/o2o/target/test-classes/
+2018-04-11 17:03:07.867 [main] DEBUG com.wang.o2o.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, last_edit_time=?, enable_status=?, advice=?, area_id=?, shop_category_id=? where shop_id=? 
+2018-04-11 17:03:07.870 [main] DEBUG com.wang.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试的店铺3(String), test3(String), test3(String), test3(String), \upload\images\item\shop\38\2018041117030527565.jpg(String), 2018-04-11 17:03:05.683(Timestamp), 0(Integer), 审核中(String), 2(Integer), 10(Long), 38(Long)
+2018-04-11 17:03:07.969 [main] DEBUG com.wang.o2o.dao.ShopDao.updateShop - <==    Updates: 1
