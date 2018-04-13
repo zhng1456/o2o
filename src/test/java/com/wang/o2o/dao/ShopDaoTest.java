@@ -20,7 +20,7 @@ public class ShopDaoTest extends BaseTest {
 	private ShopDao shopDao;
 
 	@Test
-	@Ignore
+	
 	public void testQueryShopListAndCount() {
 		Shop shopCondition = new Shop();
 		ShopCategory childCategory = new ShopCategory();

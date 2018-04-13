@@ -1,26 +1,27 @@
-2018-04-11 16:08:41.496 [main] DEBUG com.wang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in (select shop_category_id from tb_shop_category WHERE parent_id = ?) AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
-2018-04-11 16:08:41.557 [main] DEBUG com.wang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 12(Long), 0(Integer), 6(Integer)
-2018-04-11 16:08:41.657 [main] DEBUG com.wang.o2o.dao.ShopDao.queryShopList - <==      Total: 6
-2018-04-11 16:08:41.682 [main] DEBUG com.wang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in (select shop_category_id from tb_shop_category WHERE parent_id = ?) AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
-2018-04-11 16:08:41.683 [main] DEBUG com.wang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 12(Long)
-2018-04-11 16:08:41.730 [main] DEBUG com.wang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
-2018-04-11 16:09:48.033 [main] DEBUG com.wang.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?,?,?,?, ?,?,?,?,?, ?,?, ?,?) 
-2018-04-11 16:09:48.088 [main] DEBUG com.wang.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 阿阿阿阿阿阿(String), test(String), test(String), test(String), test(String), null, 2018-04-11 16:09:47.087(Timestamp), null, 0(Integer), 审核中(String)
-2018-04-11 16:11:49.290 [main] DEBUG com.wang.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?,?,?,?, ?,?,?,?,?, ?,?, ?,?) 
-2018-04-11 16:11:49.351 [main] DEBUG com.wang.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 10(Long), 阿阿阿阿阿阿(String), test(String), test(String), test(String), test(String), null, 2018-04-11 16:11:48.322(Timestamp), null, 0(Integer), 审核中(String)
-2018-04-11 16:11:49.451 [main] DEBUG com.wang.o2o.dao.ShopDao.insertShop - <==    Updates: 1
-2018-04-11 16:17:10.811 [main] DEBUG com.wang.o2o.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_desc=?, shop_addr=?, last_edit_time=? where shop_id=? 
-2018-04-11 16:17:10.859 [main] DEBUG com.wang.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试描述(String), 测试地址a(String), 2018-04-11 16:17:09.752(Timestamp), 1(Long)
-2018-04-11 16:17:10.960 [main] DEBUG com.wang.o2o.dao.ShopDao.updateShop - <==    Updates: 1
-2018-04-11 17:03:05.728 [main] DEBUG com.wang.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?,?,?,?, ?,?,?,?,?, ?,?, ?,?) 
-2018-04-11 17:03:05.795 [main] DEBUG com.wang.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 10(Long), 测试的店铺3(String), test3(String), test3(String), test3(String), null, null, 2018-04-11 17:03:05.683(Timestamp), 2018-04-11 17:03:05.683(Timestamp), 0(Integer), 审核中(String)
-2018-04-11 17:03:05.894 [main] DEBUG com.wang.o2o.dao.ShopDao.insertShop - <==    Updates: 1
-2018-04-11 17:03:05.963 [main] DEBUG com.wang.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\38\2018041117030527565.jpg
-2018-04-11 17:03:05.964 [main] DEBUG com.wang.o2o.util.ImageUtil - current complete addr is :F:\projectdev\image\upload\images\item\shop\38\2018041117030527565.jpg
-2018-04-11 17:03:05.964 [main] DEBUG com.wang.o2o.util.ImageUtil - basePath is :/E:/study_hadoop/o2o/target/test-classes/
-2018-04-11 17:03:07.867 [main] DEBUG com.wang.o2o.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, last_edit_time=?, enable_status=?, advice=?, area_id=?, shop_category_id=? where shop_id=? 
-2018-04-11 17:03:07.870 [main] DEBUG com.wang.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试的店铺3(String), test3(String), test3(String), test3(String), \upload\images\item\shop\38\2018041117030527565.jpg(String), 2018-04-11 17:03:05.683(Timestamp), 0(Integer), 审核中(String), 2(Integer), 10(Long), 38(Long)
-2018-04-11 17:03:07.969 [main] DEBUG com.wang.o2o.dao.ShopDao.updateShop - <==    Updates: 1
-2018-04-11 19:14:53.631 [main] DEBUG com.wang.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
-2018-04-11 19:14:53.724 [main] DEBUG com.wang.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-2018-04-11 19:14:53.816 [main] DEBUG com.wang.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 6
+2018-04-13 15:36:06.634 [main] DEBUG com.wang.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2018-04-13 15:36:06.677 [main] DEBUG com.wang.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 1(Long)
+2018-04-13 15:36:06.783 [main] DEBUG com.wang.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2018-04-13 15:41:59.273 [main] DEBUG com.wang.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2018-04-13 15:41:59.336 [main] DEBUG com.wang.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 1(Long)
+2018-04-13 15:41:59.437 [main] DEBUG com.wang.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2018-04-13 15:41:59.491 [main] DEBUG com.wang.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\1\2018041315415969087.jpg
+2018-04-13 15:41:59.492 [main] DEBUG com.wang.o2o.util.ImageUtil - current complete addr is :F:\projectdev\image\upload\images\item\shop\1\2018041315415969087.jpg
+2018-04-13 15:41:59.492 [main] DEBUG com.wang.o2o.util.ImageUtil - basePath is :/E:/study_hadoop/o2o/target/test-classes/
+2018-04-13 15:42:01.391 [main] DEBUG com.wang.o2o.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_name=?, shop_img=?, last_edit_time=? where shop_id=? 
+2018-04-13 15:42:01.393 [main] DEBUG com.wang.o2o.dao.ShopDao.updateShop - ==> Parameters: 修改后的店铺名称(String), \upload\images\item\shop\1\2018041315415969087.jpg(String), 2018-04-13 15:42:01.353(Timestamp), 1(Long)
+2018-04-13 15:42:01.484 [main] DEBUG com.wang.o2o.dao.ShopDao.updateShop - <==    Updates: 1
+2018-04-13 15:42:01.491 [main] DEBUG com.wang.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2018-04-13 15:42:01.492 [main] DEBUG com.wang.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 1(Long)
+2018-04-13 15:42:01.541 [main] DEBUG com.wang.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2018-04-13 16:19:59.838 [main] DEBUG com.wang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in (select shop_category_id from tb_shop_category WHERE parent_id = ?) AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
+2018-04-13 16:19:59.891 [main] DEBUG com.wang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 12(Long), 0(Integer), 6(Integer)
+2018-04-13 16:19:59.970 [main] DEBUG com.wang.o2o.dao.ShopDao.queryShopList - <==      Total: 6
+2018-04-13 16:19:59.980 [main] DEBUG com.wang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in (select shop_category_id from tb_shop_category WHERE parent_id = ?) AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
+2018-04-13 16:19:59.980 [main] DEBUG com.wang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 12(Long)
+2018-04-13 16:20:00.030 [main] DEBUG com.wang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2018-04-13 16:22:32.929 [main] DEBUG com.wang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
+2018-04-13 16:22:32.961 [main] DEBUG com.wang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 3(Long), 2(Integer), 2(Integer)
+2018-04-13 16:22:33.021 [main] DEBUG com.wang.o2o.dao.ShopDao.queryShopList - <==      Total: 0
+2018-04-13 16:22:33.034 [main] DEBUG com.wang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
+2018-04-13 16:22:33.034 [main] DEBUG com.wang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 3(Long)
+2018-04-13 16:22:33.089 [main] DEBUG com.wang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1

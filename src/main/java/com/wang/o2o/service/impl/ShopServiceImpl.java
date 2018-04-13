@@ -72,6 +72,7 @@ public class ShopServiceImpl implements ShopService {
 					return new ShopExecution(ShopStateEnum.SUCCESS, shop);
 				}
 			} catch (Exception e) {
+				e.printStackTrace();
 				throw new ShopOperationException("modifyShop error:" + e.getMessage());
 			}
 		}

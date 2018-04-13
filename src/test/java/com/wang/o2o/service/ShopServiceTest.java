@@ -43,7 +43,7 @@ public class ShopServiceTest extends BaseTest {
 		Shop shop = new Shop();
 		shop.setShopId(1L);
 		shop.setShopName("修改后的店铺名称");
-		File shopImg = new File("/Users/baidu/work/image/dabai.jpg");
+		File shopImg = new File("D:\\123456789.jpg");
 		InputStream is = new FileInputStream(shopImg);
 		ImageHolder imageHolder = new ImageHolder("dabai.jpg", is);
 		ShopExecution shopExecution = shopService.modifyShop(shop, imageHolder);

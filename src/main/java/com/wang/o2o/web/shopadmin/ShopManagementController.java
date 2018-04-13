@@ -164,10 +164,10 @@ public class ShopManagementController {
 		}
 		// 2.注册店铺
 		if (shop != null && shopImg != null) {
-			//PersonInfo owner = (PersonInfo) request.getSession().getAttribute("user");
+			PersonInfo owner = (PersonInfo) request.getSession().getAttribute("user");
 			//这里先用1做测试,后面改成从Session中读
-			PersonInfo owner =new PersonInfo();
-			owner.setUserId(1L);
+			//PersonInfo owner =new PersonInfo();
+			//owner.setUserId(1L);
 			shop.setOwner(owner);
 			ShopExecution se;
 			try {
