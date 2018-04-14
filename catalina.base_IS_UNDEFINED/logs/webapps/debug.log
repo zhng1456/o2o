@@ -25,3 +25,6 @@
 2018-04-13 16:22:33.034 [main] DEBUG com.wang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
 2018-04-13 16:22:33.034 [main] DEBUG com.wang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 3(Long)
 2018-04-13 16:22:33.089 [main] DEBUG com.wang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2018-04-13 16:57:02.160 [main] DEBUG c.w.o.d.P.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id = ? ORDER BY priority DESC 
+2018-04-13 16:57:02.205 [main] DEBUG c.w.o.d.P.queryProductCategoryList - ==> Parameters: 1(Long)
+2018-04-13 16:57:02.285 [main] DEBUG c.w.o.d.P.queryProductCategoryList - <==      Total: 0
